@@ -1,3 +1,22 @@
+## 数据准备（Specific to me）
+
+```bash
+mkdir -p datasets/coco
+ln -s /mnt/d/0-Datasets/public/COCO2017/annotations annotations
+ln -s /mnt/d/0-Datasets/public/COCO2017/images/train2017 train2017
+ln -s /mnt/d/0-Datasets/public/COCO2017/images/val2017 val2017
+```
+
+## 训练
+
+```bash
+mkdir work_dirs
+python train_coco.py --config-file configs/coco/querydet_train.yaml --num-gpu 1 OUTPUT_DIR work_dirs/coco_querydet
+```
+
+
+
+
 # QueryDet-PyTorch
 
 <p align="center">
